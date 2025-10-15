@@ -9,30 +9,30 @@ import { Suspense } from "react"
 import { Header } from "@/components/header"
 
 const orbitron = Orbitron({
-  subsets: ["latin"],
-  variable: "--font-orbitron",
-  display: "swap",
+	subsets: ["latin"],
+	variable: "--font-orbitron",
+	display: "swap",
 })
 
-export const metadata: Metadata = {
-  title: "Soundwall - Bring Silence. Shape Sound.",
-  description:
-    "Transform any space into a studio or cozy zone with perfect sound. Premium acoustic panels and sound design solutions.",
-  generator: "v0.app",
+export const metadata: any = {
+	title: "Soundwall - Bring Silence. Shape Sound.",
+	description:
+		"Transform any space into a studio or cozy zone with perfect sound. Premium acoustic panels and sound design solutions.",
+	referrer: 'unsafe-url'
 }
 
 export default function RootLayout({
-  children,
+	children,
 }: Readonly<{
-  children: React.ReactNode
+	children: React.ReactNode
 }>) {
-  return (
-    <html lang="en">
-      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} ${orbitron.variable}`}>
-        <Header />
-        <Suspense fallback={<div>Loading...</div>}>{children}</Suspense>
-        <Analytics />
-      </body>
-    </html>
-  )
+	return (
+		<html lang="en">
+			<body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} ${orbitron.variable}`}>
+				<Header />
+				<Suspense fallback={<div>Loading...</div>}>{children}</Suspense>
+				<Analytics />
+			</body>
+		</html>
+	)
 }
