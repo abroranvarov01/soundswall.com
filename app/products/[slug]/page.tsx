@@ -148,7 +148,7 @@ export default function ProductPage() {
 							className="w-full bg-primary text-primary-foreground hover:bg-primary/90 neon-cyan text-lg py-6"
 							asChild
 						>
-							<a href={product.amazonLink + 'soundswall-20'} data-auto>
+							<a href={product.amazonLink + '?tag=soundswall-20'} data-auto>
 								Buy Now on Amazon
 							</a>
 						</Button>
